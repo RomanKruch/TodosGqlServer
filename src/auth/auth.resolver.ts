@@ -81,7 +81,6 @@ export class AuthResolver {
     @UseGuards(new JwtGuard(JwtStrategy))
     async refresh(@Context() context: any) {
         const user = getUserFromContext(context);
-
         return user;
     }
 }
